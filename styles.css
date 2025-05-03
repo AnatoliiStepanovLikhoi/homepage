@@ -50,6 +50,17 @@ body {
   margin-bottom: 15px;
 }
 
+.contact_info_container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* Лівий блок, аватар, правий блок */
+  align-items: center;
+  column-gap: 20px;
+}
+
+.contact-info__block:last-child {
+  justify-self: end;
+}
+
 @media screen and (max-width: 576px) {
   .main-info,
   .contact_info_container {
