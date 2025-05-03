@@ -172,6 +172,12 @@ body {
   text-align: justify;
 }
 
+.skills__text-decsription {
+  color: var(--secondary-text-color);
+  text-align: justify;
+  font-weight: 600;
+}
+
 /* Experience and additional info styles */
 
 .experiences {
