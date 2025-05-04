@@ -128,10 +128,34 @@ body {
   text-decoration: none;
   display: flex;
   justify-content: start;
+
+  transition: all 0.3s ease;
 }
 
 .contact-info__item:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.contact-info__item:hover {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.contact-info__item:hover span {
+  color: var(--text-decoration-color);
+}
+
+.contact-info__item-icon path {
+  fill: var(--icon-color);
+  transition: fill 0.3s ease;
+}
+
+.contact-info__item:hover .contact-info__item-icon path {
+  fill: var(--text-decoration-color);
+}
+
+.contact-info__item:hover .contact-info__item-icon {
+  transform: scale(1.05);
 }
 
 .contact-info__item-icon-wrapper {
@@ -141,19 +165,17 @@ body {
   justify-content: center;
 }
 
-.contact-info__item-icon path {
-  fill: var(--icon-color);
-}
-
 .contact-info__item-icon {
   height: 1.1428rem;
   vertical-align: text-bottom;
+
+  transition: all 0.3s ease;
 }
 
 .contact-info__avatar {
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
   border: 3px solid;
   border-color: var(--text-decoration-color);
@@ -231,6 +253,25 @@ body {
   margin-bottom: 20px;
 }
 
+.experiences__company-project-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.experiences__company-project-link::after {
+  content: ',';
+  margin-right: 2px;
+}
+
+.experiences__company-project-link:last-of-type::after {
+  content: '';
+}
+
+.experiences__company-project-link:hover {
+  text-decoration: underline;
+  color: var(--text-decoration-color);
+}
+
 .experiences__company-project {
   margin-left: 15px;
   margin-bottom: 25px;
@@ -266,6 +307,10 @@ body {
   color: var(--secondary-text-color);
   text-align: left;
   margin-bottom: 20px;
+}
+
+.additional-info__education-university:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .additional-info__education-university-durability {
@@ -308,7 +353,7 @@ body {
 }
 
 .profile-extra__title {
-  color: var(--primary-text-color);
+  color: var(--secondary-text-color);
   font-size: 24px;
   margin-bottom: 20px;
   border-bottom: 3px solid var(--border-color);
@@ -316,8 +361,13 @@ body {
   position: relative;
 }
 
-.profile-extra__title::before {
+.profile-extra__title.time::before {
   content: '🕒';
+  margin-right: 8px;
+}
+
+.profile-extra__title.check::before {
+  content: '✔️';
   margin-right: 8px;
 }
 
