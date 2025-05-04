@@ -253,6 +253,25 @@ body {
   margin-bottom: 20px;
 }
 
+.experiences__company-project-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.experiences__company-project-link::after {
+  content: ',';
+  margin-right: 2px;
+}
+
+.experiences__company-project-link:last-of-type::after {
+  content: '';
+}
+
+.experiences__company-project-link:hover {
+  text-decoration: underline;
+  color: var(--text-decoration-color);
+}
+
 .experiences__company-project {
   margin-left: 15px;
   margin-bottom: 25px;
