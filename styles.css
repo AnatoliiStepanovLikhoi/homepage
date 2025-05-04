@@ -300,13 +300,13 @@ body {
 
 /* Profile extra block styles */
 
-.profile-extra-container {
+.profile-extra__container {
   border-radius: 8px;
   padding: 25px;
   box-shadow: var(--box-shadow);
 }
 
-.profile-extra-title {
+.profile-extra__title {
   color: var(--primary-text-color);
   font-size: 24px;
   margin-bottom: 20px;
@@ -315,7 +315,44 @@ body {
   position: relative;
 }
 
-.profile-extra-title::before {
+.profile-extra__title::before {
   content: '🕒';
   margin-right: 8px;
+}
+
+.timeline__item {
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 25px;
+  border-left: 2px solid var(--text-decoration-color);
+  padding-left: 20px;
+}
+
+.timeline__item::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--text-decoration-color);
+}
+
+.timeline__item--period {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.timeline__item--role {
+  font-weight: 700;
+  color: var(--primary-text-color);
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.timeline__item--description {
+  color: var(--secondary-text-color);
+  line-height: 1.5;
+  font-size: 15px;
 }
