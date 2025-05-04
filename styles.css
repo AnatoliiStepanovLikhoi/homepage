@@ -16,6 +16,7 @@ body {
   --icon-color: #6a737d;
   --border-color: #ff9a0045;
   --text-decoration-color: #ff9a00;
+  --box-shadow: 1px 1px 7px 7px #f5f5f5;
 }
 
 .container {
@@ -48,6 +49,18 @@ body {
   border-bottom: 3px solid var(--border-color);
   padding-bottom: 30px;
   margin-bottom: 15px;
+}
+
+.resume__block--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .resume__block--grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .contact_info_container {
@@ -283,4 +296,26 @@ body {
 
 .additional-info__languages-item {
   color: var(--secondary-text-color);
+}
+
+/* Profile extra block styles */
+
+.profile-extra-container {
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: var(--box-shadow);
+}
+
+.profile-extra-title {
+  color: var(--primary-text-color);
+  font-size: 24px;
+  margin-bottom: 20px;
+  border-bottom: 3px solid var(--border-color);
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.profile-extra-title::before {
+  content: '🔹';
+  margin-right: 8px;
 }
