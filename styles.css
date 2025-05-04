@@ -128,10 +128,34 @@ body {
   text-decoration: none;
   display: flex;
   justify-content: start;
+
+  transition: all 0.3s ease;
 }
 
 .contact-info__item:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.contact-info__item:hover {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.contact-info__item:hover span {
+  color: var(--text-decoration-color);
+}
+
+.contact-info__item-icon path {
+  fill: var(--icon-color);
+  transition: fill 0.3s ease;
+}
+
+.contact-info__item:hover .contact-info__item-icon path {
+  fill: var(--text-decoration-color);
+}
+
+.contact-info__item:hover .contact-info__item-icon {
+  transform: scale(1.05);
 }
 
 .contact-info__item-icon-wrapper {
@@ -141,13 +165,11 @@ body {
   justify-content: center;
 }
 
-.contact-info__item-icon path {
-  fill: var(--icon-color);
-}
-
 .contact-info__item-icon {
   height: 1.1428rem;
   vertical-align: text-bottom;
+
+  transition: all 0.3s ease;
 }
 
 .contact-info__avatar {
@@ -308,7 +330,7 @@ body {
 }
 
 .profile-extra__title {
-  color: var(--primary-text-color);
+  color: var(--secondary-text-color);
   font-size: 24px;
   margin-bottom: 20px;
   border-bottom: 3px solid var(--border-color);
