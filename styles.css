@@ -316,6 +316,6 @@ body {
 }
 
 .profile-extra-title::before {
-  content: '🔹';
+  content: '🕒';
   margin-right: 8px;
 }
