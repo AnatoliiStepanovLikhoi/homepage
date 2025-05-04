@@ -316,8 +316,13 @@ body {
   position: relative;
 }
 
-.profile-extra__title::before {
+.profile-extra__title.time::before {
   content: '🕒';
+  margin-right: 8px;
+}
+
+.profile-extra__title.check::before {
+  content: '✔️';
   margin-right: 8px;
 }
 
